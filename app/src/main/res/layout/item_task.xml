@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <LinearLayout
+            android:id="@+id/main_item_layout"
+            android:background="@color/colorSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:padding="8dp"
+                android:id="@+id/task_status"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/checked_ic"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="12dp" />
+
+            <TextView
+                android:id="@+id/task_name"
+                android:layout_width="match_parent"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/textImportant" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

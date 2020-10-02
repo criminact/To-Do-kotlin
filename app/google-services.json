@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "311364193369",
+    "firebase_url": "https://teamscopetodo.firebaseio.com",
+    "project_id": "teamscopetodo",
+    "storage_bucket": "teamscopetodo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311364193369:android:9055c717186e4e78fc3548",
+        "android_client_info": {
+          "package_name": "com.noobcode.teamscopetodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311364193369-rvlhh1rrc75bbcft3qegtb3ofd1dh6rj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6smJNYLPAocEHDzRDbAcyAEhUDXCT25g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311364193369-rvlhh1rrc75bbcft3qegtb3ofd1dh6rj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

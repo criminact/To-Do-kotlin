@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".home.fragment.FeaturesFragment">
+
+        <RelativeLayout
+            android:id="@+id/main_layout_features"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager_features"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="100dp" />
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/page_indicator_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="100dp"
+                app:piv_animationType="thinWorm"
+                app:piv_interactiveAnimation="true"
+                app:piv_selectedColor="@color/colorSecondary"
+                app:piv_unselectedColor="@color/textUnImportant"
+                app:piv_viewPager="@id/view_pager_features" />
+
+            <Button
+                android:id="@+id/explore_button"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/colorSecondary"
+                android:text="Explore"
+                android:textColor="@color/textImportant" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/progress_features"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Creating a new User"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/mediumText" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

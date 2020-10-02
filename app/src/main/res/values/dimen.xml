@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="largeHeadingText">28sp</dimen>
+    <dimen name="headingText">20sp</dimen>
+    <dimen name="largeText">18sp</dimen>
+    <dimen name="mediumText">14sp</dimen>
+
+</resources>

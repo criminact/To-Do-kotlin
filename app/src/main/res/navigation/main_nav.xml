@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/featuresFragment">
+
+    <fragment
+        android:id="@+id/allTaskFragment"
+        android:name="com.noobcode.teamscopetodo.home.fragment.AllTaskFragment"
+        android:label="fragment_all_task"
+        tools:layout="@layout/fragment_all_task" >
+        <argument
+            android:name="user"
+            app:argType="com.noobcode.teamscopetodo.model.User" />
+        <action
+            android:id="@+id/action_allTaskFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/featuresFragment"
+        android:name="com.noobcode.teamscopetodo.home.fragment.FeaturesFragment"
+        android:label="fragment_features"
+        tools:layout="@layout/fragment_features" >
+        <action
+            android:id="@+id/action_featuresFragment_to_allTaskFragment"
+            app:destination="@id/allTaskFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.noobcode.teamscopetodo.home.fragment.AddTaskFragment"
+        android:label="fragment_add_task"
+        tools:layout="@layout/fragment_add_task" >
+        <action
+            android:id="@+id/action_addTaskFragment_to_allTaskFragment"
+            app:destination="@id/allTaskFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="task"
+            app:argType="com.noobcode.teamscopetodo.model.Task" />
+    </fragment>
+</navigation>
