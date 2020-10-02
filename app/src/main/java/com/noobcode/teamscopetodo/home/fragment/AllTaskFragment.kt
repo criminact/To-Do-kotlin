@@ -63,7 +63,7 @@ class AllTaskFragment : Fragment(), TaskGestureControl {
 
 
         binding.addTask.setOnClickListener {
-            var task: Task= Task()
+            var task: Task = Task()
             val actions: NavDirections =
                 AllTaskFragmentDirections.actionAllTaskFragmentToAddTaskFragment(task)
             Navigation.findNavController(it).navigate(actions)
@@ -92,6 +92,7 @@ class AllTaskFragment : Fragment(), TaskGestureControl {
     }
 
     override fun longPressed(task: Task) {
+        updateTaskStatus()
         viewModel.deleteTask(user.firebaseUid, task).observe(viewLifecycleOwner, Observer {
             if (it != null && it) {
                 /*nothing*/

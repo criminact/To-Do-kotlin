@@ -81,8 +81,9 @@ class TaskAdapter(
         }
 
         holder.binding.mainItemLayout.setOnLongClickListener {
-            taskGestureControl.longPressed(tasks[position])
+            var oldTask: Task = Task(tasks[position].name, tasks[position].priority, tasks[position].isCompleted)
             deleteTask(tasks[position])
+            taskGestureControl.longPressed(oldTask)
             true
         }
 
@@ -98,8 +99,12 @@ class TaskAdapter(
 
     private fun deleteTask(task: Task) {
         var position: Int = tasks.indexOf(task)
+        if(tasks[position].isCompleted){
+            completedTasks--
+        }
         tasks.remove(task)
         notifyItemRemoved(position)
+        notifyItemRangeChanged(position, itemCount);
     }
 
     private fun taskStatusSwitch(binding: ItemTaskBinding, task: Task): Task {
