@@ -6,20 +6,18 @@
         <item name="colorPrimaryVariant">@color/textImportant</item>
         <item name="colorOnPrimary">@color/colorSecondaryDark</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/colorSecondary</item>
-        <item name="colorSecondaryVariant">@color/colorVariantBlue</item>
-        <item name="colorOnSecondary">@color/colorPrimaryDark</item>
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorSecondaryVariant">@color/textImportant</item>
+        <item name="colorOnSecondary">@color/colorSecondaryDark</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/textImportant</item>
+
     </style>
 
     <style name="SplashTheme" parent="Theme.TeamscopeToDo">
         <item name="android:windowBackground">@mipmap/splash_image</item>
     </style>
-
-
-
 
 </resources>

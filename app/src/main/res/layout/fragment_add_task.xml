@@ -33,6 +33,7 @@
                 android:fontFamily="@font/inter_semibold"
                 android:hint="@string/dummy_task"
                 android:inputType="text"
+                android:textColor="@color/textImportant"
                 android:maxLength="100"
                 android:textColorHint="@color/textUnImportant"
                 android:textSize="@dimen/largeHeadingText"
@@ -61,6 +62,7 @@
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/colorVariantBlue"
                     android:checked="true"
+                    android:textColor="@color/textImportant"
                     android:text="Low"
                     app:useMaterialThemeColors="false" />
 
@@ -69,6 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="12dp"
+                    android:textColor="@color/textImportant"
                     android:buttonTint="@color/colorVariantPurple"
                     android:text="High" />
 

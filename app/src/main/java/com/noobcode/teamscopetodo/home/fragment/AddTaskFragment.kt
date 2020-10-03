@@ -16,7 +16,6 @@ import com.noobcode.teamscopetodo.home.viewmodel.AddTaskViewModel
 import com.noobcode.teamscopetodo.home.fragment.AddTaskFragmentDirections
 import com.noobcode.teamscopetodo.model.Task
 
-
 class AddTaskFragment : Fragment() {
 
     private lateinit var binding: FragmentAddTaskBinding
@@ -44,7 +43,7 @@ class AddTaskFragment : Fragment() {
 
         binding.addTask.setOnClickListener(fun(view: View) {
             if (validateName()) {
-                if(task != null){
+                if(task != null && task.name.isNotEmpty()){
 
                     var task: Task = Task()
                     task.name = binding.nameField.text.toString()

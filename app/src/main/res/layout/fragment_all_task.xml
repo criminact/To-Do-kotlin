@@ -43,6 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="12dp"
+                android:textColor="@color/textUnImportant"
                 android:fontFamily="@font/inter_semibold"
                 android:text="0 completed, 0 incomplete"
                 android:textSize="@dimen/largeText" />
@@ -84,7 +85,6 @@
             android:src="@drawable/add_ic"
             app:maxImageSize="32dp"
             app:tint="@color/colorSecondary" />
-
 
     </RelativeLayout>
 

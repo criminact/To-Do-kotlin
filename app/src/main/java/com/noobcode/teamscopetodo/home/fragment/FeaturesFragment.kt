@@ -20,6 +20,9 @@ import com.noobcode.teamscopetodo.adapters.ImageAdapter
 import com.noobcode.teamscopetodo.databinding.FragmentFeaturesBinding
 import com.noobcode.teamscopetodo.home.viewmodel.FeaturesViewModel
 import com.noobcode.teamscopetodo.model.User
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class FeaturesFragment : Fragment() {
 

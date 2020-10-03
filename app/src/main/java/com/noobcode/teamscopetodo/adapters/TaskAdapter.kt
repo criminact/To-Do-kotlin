@@ -20,9 +20,9 @@ class TaskAdapter(
     var completedTasks = 0
 
     fun updateList(tasks: ArrayList<Task>) {
-            this.tasks.clear()
-            this.tasks = tasks
-            notifyDataSetChanged()
+        this.tasks.clear()
+        this.tasks = tasks
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -38,6 +38,7 @@ class TaskAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.taskName.text = tasks[position].name
         if (tasks[position].isCompleted) {
+
             GlideClass.loadImage(
                 holder.binding.taskStatus, R.drawable.checked_ic, GlideClass.getProgressDrawable(
                     holder.binding.taskStatus.context
@@ -46,7 +47,11 @@ class TaskAdapter(
             holder.binding.taskName.paintFlags =
                 holder.binding.taskName.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
 
-            holder.binding.taskName.setTextColor(holder.binding.taskName.context.resources.getColor(R.color.textUnImportant))
+            holder.binding.taskName.setTextColor(
+                holder.binding.taskName.context.resources.getColor(
+                    R.color.textUnImportant
+                )
+            )
 
             completedTasks++
 
@@ -72,7 +77,11 @@ class TaskAdapter(
             holder.binding.taskName.paintFlags =
                 holder.binding.taskName.paintFlags and (Paint.STRIKE_THRU_TEXT_FLAG.inv())
 
-            holder.binding.taskName.setTextColor(holder.binding.taskName.context.resources.getColor(R.color.textImportant))
+            holder.binding.taskName.setTextColor(
+                holder.binding.taskName.context.resources.getColor(
+                    R.color.textImportant
+                )
+            )
 
         }
 
@@ -81,14 +90,16 @@ class TaskAdapter(
         }
 
         holder.binding.mainItemLayout.setOnLongClickListener {
-            var oldTask: Task = Task(tasks[position].name, tasks[position].priority, tasks[position].isCompleted)
+            var oldTask: Task =
+                Task(tasks[position].name, tasks[position].priority, tasks[position].isCompleted)
             deleteTask(tasks[position])
             taskGestureControl.longPressed(oldTask)
             true
         }
 
         holder.binding.taskStatus.setOnClickListener {
-            var oldTask: Task = Task(tasks[position].name, tasks[position].priority, tasks[position].isCompleted)
+            var oldTask: Task =
+                Task(tasks[position].name, tasks[position].priority, tasks[position].isCompleted)
             taskStatusSwitch(holder.binding, tasks[position])
             taskGestureControl.taskSwitch(oldTask, tasks[position])
         }
@@ -99,7 +110,7 @@ class TaskAdapter(
 
     private fun deleteTask(task: Task) {
         var position: Int = tasks.indexOf(task)
-        if(tasks[position].isCompleted){
+        if (tasks[position].isCompleted) {
             completedTasks--
         }
         tasks.remove(task)
